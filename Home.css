@@ -106,7 +106,6 @@ header h1 {
     align-items: center;
 }
 
-/* PARÁGRAFO GLOBAL COM EFEITO NEON */
 p {  
     margin-bottom: 2vw;
     color: rgb(255, 255, 255);
@@ -230,7 +229,7 @@ span {
 
 .descricao_projeto {
     font-size: large;
-    text-shadow: none; /* Tira o neon daqui */
+    text-shadow: none; 
     align-items: center;
     margin: 20px;
 }
@@ -248,13 +247,14 @@ span {
     padding: 1.1rem;
     font-size: medium;
     margin: 20px;
-    cursor: pointer;
+    cursor: alias;
 }
 
 #culinaria a {
     list-style: none;
     text-decoration: none;
     color: white;
+    cursor: alias;
 }
 
 #culinaria:hover {
@@ -334,12 +334,12 @@ footer {
     border-left: 1px solid rgba(255, 255, 255, 0.1); 
     padding-top: 30px;
     z-index: 999; 
-    right: -300px; /* Começa escondido */
+    right: -300px; 
     transition: right 0.4s ease-in-out; 
 }
 
 #menu.ativo {
-    right: 0; /* Aparece! */
+    right: 0; 
 }
 
 .menu_Tittle {
@@ -409,10 +409,10 @@ nav {
     
     width: 60vw;
     height: auto; 
-    max-height: 85vh;
+    max-height: 85vh; 
     align-items: center;
     border-radius: 20px;
-    z-index: 500;
+    z-index: 500; 
     transition: transform 0.4s ease;
 }
 
@@ -450,180 +450,87 @@ nav {
     text-shadow: none !important; 
 }
 
-.descricao_receita::-webkit-scrollbar {
-    width: 10px;
-}
-.descricao_receita::-webkit-scrollbar-track {
-    background: #e0e0e0; 
-    border-radius: 10px;
-}
-.descricao_receita::-webkit-scrollbar-thumb {
-    background: var(--cor-botoes); 
-    border-radius: 10px;
-}
-.descricao_receita::-webkit-scrollbar-thumb:hover {
-    background: var(--cor-header); 
-}
+.descricao_receita::-webkit-scrollbar { width: 10px; }
+.descricao_receita::-webkit-scrollbar-track { background: #e0e0e0; border-radius: 10px; }
+.descricao_receita::-webkit-scrollbar-thumb { background: var(--cor-botoes); border-radius: 10px; }
+.descricao_receita::-webkit-scrollbar-thumb:hover { background: var(--cor-header); }
 
 /* ==========================================
    8. O MODAL DE "COMO USAR"
    ========================================== */
 .modal-fundo {
     position: fixed !important; 
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    display: flex !important; justify-content: center !important; align-items: center !important;
     background-color: rgba(0, 0, 0, 0.85); 
     backdrop-filter: blur(10px); 
     z-index: 99999; 
-    opacity: 0; 
-    pointer-events: none;
-    transition: all 0.4s ease-in-out;
+    opacity: 0; pointer-events: none; transition: all 0.4s ease-in-out;
 }
 
-.modal-fundo.ativo {
-    opacity: 1;
-    pointer-events: all;
-}
+.modal-fundo.ativo { opacity: 1; pointer-events: all; }
 
 .modal-caixa {
-    background-color: var(--cor-principal);
-    padding: 50px;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 550px;
-    text-align: center;
-    border-top: 10px solid var(--cor-header);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-    transform: scale(0.6);
-    transition: all 0.4s ease-in-out;
+    background-color: var(--cor-principal); padding: 50px; border-radius: 20px; width: 90%; max-width: 550px; text-align: center; border-top: 10px solid var(--cor-header); box-shadow: 0 15px 40px rgba(0,0,0,0.5); transform: scale(0.6); transition: all 0.4s ease-in-out;
 }
 
-.modal-fundo.ativo .modal-caixa {
-    transform: scale(1);
-}
+.modal-fundo.ativo .modal-caixa { transform: scale(1); }
 
-.modal-caixa h2, 
-.modal-caixa p, 
-.modal-caixa ul, 
-.modal-caixa li {
-    text-shadow: none !important; 
-    filter: none !important; 
-    color: var(--cor-textos) !important; 
-    font-size: 18px !important; 
-}
+.modal-caixa h2, .modal-caixa p, .modal-caixa ul, .modal-caixa li { text-shadow: none !important; filter: none !important; color: var(--cor-textos) !important; font-size: 18px !important; }
 
-.modal-caixa h2 {
-    color: var(--cor-header) !important;
-    font-size: 32px !important;
-    margin-bottom: 25px;
-    font-weight: bold;
-}
+.modal-caixa h2 { color: var(--cor-header) !important; font-size: 32px !important; margin-bottom: 25px; font-weight: bold; }
 
-.btn-fechar {
-    background-color: var(--cor-header);
-    color: white !important;
-    border: none;
-    padding: 15px 35px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: all 0.3s;
-    text-shadow: none !important; 
-}
+.btn-fechar { background-color: var(--cor-header); color: white !important; border: none; padding: 15px 35px; font-size: 18px; font-weight: bold; border-radius: 10px; cursor: pointer; margin-top: 20px; transition: all 0.3s; text-shadow: none !important; }
+.btn-fechar:hover { background-color: var(--cor-fundoback); transform: scale(1.05); }
 
-.btn-fechar:hover {
-    background-color: var(--cor-fundoback);
-    transform: scale(1.05);
-}
+/* =======================================================
+   9. RESPONSIVIDADE BRABA (O TRATOR DE VERDADE 🚜💥)
+   ======================================================= */
 
-/* ==========================================
-   9. RESPONSIVIDADE BRABA
-   ========================================== */
-
-/* 📱 MODO TABLET E TELAS MÉDIAS (Até 1024px) */
+/* 📱 MODO TABLET (Até 1024px) */
 @media (max-width: 1024px) {
-    .hero {
-        flex-direction: column !important;
-        gap: 40px !important;
-    }
-    .card1 img, .card2 img, .card3 img {
-        width: 70vw !important;
-        height: auto !important;
-    }
-    #guia_sobre {
-        margin-inline: auto !important; 
-        width: 80vw !important;
-        height: auto !important;
-        padding: 3rem 1rem !important;
-    }
-    .principal {
-        height: auto !important;
-        padding-bottom: 50px !important;
-    }
+    .hero { flex-direction: column !important; gap: 40px !important; }
+    .card1 img, .card2 img, .card3 img { width: 70vw !important; height: auto !important; }
+    #guia_sobre { margin: 0 auto !important; position: static !important; width: 80vw !important; height: auto !important; padding: 3rem 1rem !important; }
+    .principal { height: auto !important; display: flex !important; justify-content: center !important; align-items: center !important; padding: 50px 0 !important; }
 }
 
-/* 📱 MODO CELULAR RAIZ (Até 768px) */
+/* 📱 MODO CELULAR RAIZ (Até 768px) - RESOLVE O BURACO NEGRO */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 20px !important;
+    /* Cabeçalho */
+    header { padding: 10px !important; }
+    header h1 { font-size: 18px !important; }
+    .logo { width: 60px !important; height: 50px !important; }
+    
+    /* A CAIXA DE BUSCA (Matando a margem voadora) */
+    .principal { height: auto !important; min-height: 50vh !important; padding: 30px 0 !important; }
+    #guia_sobre { 
+        position: static !important; /* Arranca a posição relativa bugada */
+        margin: 0 auto !important;   /* Força ela pro meio */
+        width: 90vw !important; 
+        height: auto !important; 
+        padding: 20px 10px !important; 
     }
-    .logo {
-        width: 60px !important;
-        height: 50px !important;
-    }
-    #guia_sobre {
-        width: 95vw !important;
-        margin-top: 30px !important;
-        top: 0 !important;
-    }
-    .align_buttons {
-        flex-direction: column !important;
-        gap: 15px !important;
-        width: 100% !important;
-    }
-    #buscabtn, #Como_usar {
-        width: 100% !important;
-    }
-    .card1 img, .card2 img, .card3 img {
-        width: 90vw !important;
-    }
-    .result_busca {
-        width: 95vw !important;
-        padding: 1.5rem !important;
-        max-height: 85vh !important;
-    }
-    .imagem_receita {
-        width: 150px !important;
-        height: 150px !important;
-    }
-    .nome_receita {
-        font-size: 22px !important;
-    }
-    .descricao_receita {
-        font-size: 16px !important;
-        padding: 15px !important;
-    }
-    .modal-caixa {
-        width: 95% !important;
-        padding: 30px 20px !important;
-    }
-    footer {
-        flex-direction: column !important;
-        gap: 20px !important;
-        text-align: center !important;
-        padding-bottom: 20px !important;
-    }
-    .org {
-        justify-content: center !important;
-    }
-    #menu {
-        width: 250px !important;
-    }
+    #BuscaReceita { width: 100% !important; margin-bottom: 10px !important; }
+    .align_buttons { flex-direction: column !important; gap: 10px !important; width: 100% !important; }
+    #buscabtn, #Como_usar { width: 100% !important; }
+
+    /* TEXTOS GIGANTES E FOTOS (Que tavam vazando) */
+    #guia_inscricao { height: auto !important; padding: 30px 0 !important; }
+    .incricao { font-size: 22px !important; line-height: 1.4 !important; padding: 0 15px !important; }
+    .hero { width: 100% !important; gap: 30px !important; margin-top: 30px !important; }
+    .card1 img, .card2 img, .card3 img { width: 85vw !important; height: auto !important; margin: 0 auto !important; display: block !important; }
+    .descricao_projeto { font-size: 16px !important; padding: 0 20px !important; text-align: center !important; }
+    
+    /* MODAL E RECEITA */
+    .result_busca { width: 95vw !important; padding: 1.5rem !important; max-height: 85vh !important; }
+    .imagem_receita { width: 150px !important; height: 150px !important; }
+    .nome_receita { font-size: 22px !important; }
+    .descricao_receita { font-size: 16px !important; padding: 15px !important; }
+    .modal-caixa { width: 95% !important; padding: 30px 20px !important; }
+
+    /* FOOTER */
+    footer { flex-direction: column !important; gap: 20px !important; text-align: center !important; padding-bottom: 20px !important; }
+    .org { justify-content: center !important; }
+    #menu { width: 250px !important; }
 }
