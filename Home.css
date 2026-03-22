@@ -548,3 +548,66 @@ nav {
     background-color: var(--cor-fundoback);
     transform: scale(1.05);
 }
+/* ==========================================
+   9. RESPONSIVIDADE (A MÁGICA DO CELULAR)
+   ========================================== */
+@media (max-width: 768px) {
+    /* Diminui o título e a logo pro cabeçalho não explodir */
+    header h1 {
+        font-size: 22px;
+    }
+    .logo {
+        width: 70px;
+        height: 55px;
+    }
+
+    /* Centraliza a caixa de busca e deixa ela mais larga */
+    #guia_sobre {
+        width: 90vw;
+        margin-inline: auto; 
+        height: auto;
+        padding: 2rem 1rem;
+        top: 10%;
+    }
+
+    /* Coloca as 3 fotos uma embaixo da outra! (Adeus sardinha) */
+    .hero {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .card1 img, .card2 img, .card3 img {
+        width: 80vw;
+        height: auto; 
+    }
+
+    /* Arruma a caixa branca da receita pro tamanho da telinha */
+    .result_busca {
+        width: 95vw;
+        padding: 1.5rem;
+        max-height: 80vh;
+    }
+    .imagem_receita {
+        width: 150px;
+        height: 150px;
+    }
+    .nome_receita {
+        font-size: 22px;
+    }
+
+    /* Arruma o modal de Como Usar */
+    .modal-caixa {
+        width: 95%;
+        padding: 30px 20px;
+    }
+
+    /* Bota o rodapé em coluna pro texto não encavalar */
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .infos {
+        margin: 10px;
+    }
+}
