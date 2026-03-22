@@ -549,65 +549,106 @@ nav {
     transform: scale(1.05);
 }
 /* ==========================================
-   9. RESPONSIVIDADE (A MÁGICA DO CELULAR)
+   9. RESPONSIVIDADE BRABA (MATA QUALQUER BUG DE TELA)
    ========================================== */
-@media (max-width: 768px) {
-    /* Diminui o título e a logo pro cabeçalho não explodir */
-    header h1 {
-        font-size: 22px;
-    }
-    .logo {
-        width: 70px;
-        height: 55px;
-    }
 
-    /* Centraliza a caixa de busca e deixa ela mais larga */
-    #guia_sobre {
-        width: 90vw;
-        margin-inline: auto; 
-        height: auto;
-        padding: 2rem 1rem;
-        top: 10%;
-    }
-
-    /* Coloca as 3 fotos uma embaixo da outra! (Adeus sardinha) */
+/* 📱 MODO TABLET E TELAS MÉDIAS (Até 1024px) */
+@media (max-width: 1024px) {
+    /* Desempilha as fotos e ajusta o tamanho */
     .hero {
-        flex-direction: column;
-        gap: 30px;
+        flex-direction: column !important;
+        gap: 40px !important;
     }
     .card1 img, .card2 img, .card3 img {
-        width: 80vw;
-        height: auto; 
+        width: 70vw !important;
+        height: auto !important;
+    }
+    
+    /* Centraliza a caixa principal e mata a margem gigante */
+    #guia_sobre {
+        margin-inline: auto !important; 
+        width: 80vw !important;
+        height: auto !important;
+        padding: 3rem 1rem !important;
+    }
+    .principal {
+        height: auto !important;
+        padding-bottom: 50px !important;
+    }
+}
+
+/* 📱 MODO CELULAR RAIZ (Até 768px) */
+@media (max-width: 768px) {
+    /* Cabeçalho não explode */
+    header h1 {
+        font-size: 20px !important;
+    }
+    .logo {
+        width: 60px !important;
+        height: 50px !important;
+    }
+    
+    /* Caixa de busca ocupa a tela toda e não foge pro lado */
+    #guia_sobre {
+        width: 95vw !important;
+        margin-top: 30px !important;
+        top: 0 !important;
+    }
+    
+    /* Botões de busca um embaixo do outro no celular */
+    .align_buttons {
+        flex-direction: column !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
+    #buscabtn, #Como_usar {
+        width: 100% !important;
     }
 
-    /* Arruma a caixa branca da receita pro tamanho da telinha */
+    /* Fotos gigantes no celular */
+    .card1 img, .card2 img, .card3 img {
+        width: 90vw !important;
+    }
+    
+    /* Receita centralizada e sem vazar */
     .result_busca {
-        width: 95vw;
-        padding: 1.5rem;
-        max-height: 80vh;
+        width: 95vw !important;
+        padding: 1.5rem !important;
+        max-height: 85vh !important;
     }
     .imagem_receita {
-        width: 150px;
-        height: 150px;
+        width: 150px !important;
+        height: 150px !important;
     }
     .nome_receita {
-        font-size: 22px;
+        font-size: 22px !important;
+    }
+    .descricao_receita {
+        font-size: 16px !important;
+        padding: 15px !important;
     }
 
-    /* Arruma o modal de Como Usar */
+    /* Modal na medida certa */
     .modal-caixa {
-        width: 95%;
-        padding: 30px 20px;
+        width: 95% !important;
+        padding: 30px 20px !important;
     }
 
-    /* Bota o rodapé em coluna pro texto não encavalar */
+    /* Rodapé organizado */
     footer {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-        padding-bottom: 20px;
+        flex-direction: column !important;
+        gap: 20px !important;
+        text-align: center !important;
+        padding-bottom: 20px !important;
     }
-    .infos {
-        margin: 10px;
+    .org {
+        justify-content: center !important;
+    }
+    
+    /* Menu lateral um pouco mais fino */
+    #menu {
+        width: 250px !important;
+    }
+}        margin: 10px;
     }
 }
