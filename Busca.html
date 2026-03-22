@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas - Caóticos na Cozinha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        /* SUAS CORES NO TOPO PRA CONTROLAR O SITE TODO! */
+:root {
+  --cor-header: #EA1D2C;
+  --cor-principal: #FFF8F0;
+  --cor-importante: #FF5A00;
+  --cor-textos: #333333;
+  --cor-fundo: #FAFAFA;
+  --cor-botoes: #E5A93C;
+  --cor-fundoback: #5C3A21;
+  --cor-pesquisa: #D9534F;
+  --cor-body: #000000;
+}
+
+/* Zera as margens feias do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-textos);
+}
+
+/* HEADER VERMELHÃO APP DE COMIDA */
+header {
+    background-color: var(--cor-header);
+    color: var(--cor-principal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+header a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+header a:hover {
+    color: var(--cor-botoes);
+}
+
+/* Botão de assinar lá em cima */
+.btn-destaque {
+    background-color: var(--cor-importante);
+    padding: 10px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 90, 0, 0.3);
+}
+
+/* SESSÃO PRINCIPAL (HERO) */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: var(--cor-principal);
+    border-bottom: 5px solid var(--cor-botoes);
+}
+
+.hero h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: var(--cor-fundoback); /* Marrom pra dar contraste */
+}
+
+.hero span {
+    color: var(--cor-importante); /* Laranja pra destacar */
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    color: var(--cor-textos);
+}
+
+/* Botão Grandão */
+.btn-principal {
+    background-color: var(--cor-botoes);
+    color: var(--cor-body);
+    border: none;
+    padding: 18px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-principal:hover {
+    background-color: var(--cor-importante);
+    color: var(--cor-principal);
+    transform: scale(1.05); /* Dá um pulinho */
+    box-shadow: 0 10px 20px rgba(255, 90, 0, 0.3);
+}
+
+/* CARDS DAS AULAS (Com efeito Hover top) */
+.aulas {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 80px 20px;
+}
+
+.card-aula {
+    background-color: white;
+    width: 320px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--cor-header);
+    transition: all 0.3s ease;
+}
+
+.card-aula:hover {
+    transform: translateY(-10px); /* O card flutua pra cima! */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card-aula h3 {
+    margin: 15px 0 15px 0;
+    font-size: 24px;
+    color: var(--cor-header);
+}
+
+/* Etiquetas coloridas */
+.tag {
+    background-color: var(--cor-botoes);
+    color: var(--cor-body);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.tag-importante {
+    background-color: var(--cor-importante);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* RODAPÉ MARROM CHOCOLATE */
+footer {
+    background-color: var(--cor-fundoback);
+    color: var(--cor-principal);
+    text-align: center;
+    padding: 40px;
+    margin-top: 20px;
+}
+    </style>
+    <header>
+        <h1>🍳 Caóticos na Cozinha</h1>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Aulas</a>
+            <a href="#" class="btn-destaque">Assinar Clube</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Sua panela queimou? <br><span>Você está no lugar certo!</span></h2>
+            <p>Aprenda a cozinhar do zero com a galera mais caótica e divertida da internet. Sem frescura, só sabor e muita risada.</p>
+            <button class="btn-principal">Ver Próximas Aulas</button>
+        </section>
+
+        <section class="aulas">
+            <div class="card-aula">
+                <div class="tag">Iniciante</div>
+                <h3>Miojo Gourmet</h3>
+                <p>Como transformar o prato de 3 minutos em uma experiência culinária de 3 horas (brincadeira, é rápido mesmo).</p>
+            </div>
+            
+            <div class="card-aula">
+                <div class="tag-importante">Sobrevivência</div>
+                <h3>Salvando o Arroz</h3>
+                <p>Técnicas milenares para desunidos vencerem o arroz empapado e conquistarem o grão soltinho.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito com ☕ e código bugado por Caóticos na Cozinha</p>
+    </footer>
+</body>
+</html>
