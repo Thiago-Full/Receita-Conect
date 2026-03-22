@@ -1,0 +1,550 @@
+/* ==========================================
+   1. RESET GERAL E VARIÁVEIS
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s all ease;
+}
+
+:root {
+  --cor-header: #EA1D2C;
+  --cor-principal: #FFF8F0;
+  --cor-importante: #FF5A00;
+  --cor-textos: #333333;
+  --cor-fundo: #FAFAFA;
+  --cor-botoes: #E5A93C;
+  --cor-fundoback: #5C3A21;
+  --cor-pesquisa: #D9534F;
+  --cor-body: #000000;
+}
+
+html, body {
+    overflow-x: hidden;
+    background-color: var(--cor-body);
+    scroll-behavior: smooth; 
+    scroll-padding-top: 100px; 
+}
+
+/* ==========================================
+   2. CABEÇALHO (HEADER) E MENU HAMBÚRGUER
+   ========================================== */
+header {
+    background-color: var(--cor-header);
+    border-radius: 20px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 32px;
+    text-transform: capitalize;
+    text-indent: 10px;
+    color: white;
+    font-family: monospace;
+}
+
+.logo {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(252, 136, 136);
+}
+
+.logo:hover{
+    transform: scale(1.06);
+}
+
+#menu_hamburguer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.div {
+    background-color: black;
+    height: 2px;
+    width: 25px;
+    cursor: pointer;
+}
+
+#menu_hamburguer:hover {
+    transform: scale(1.2);
+}
+
+/* ==========================================
+   3. ÁREA DE BUSCA (MAIN HERO) E PARÁGRAFOS
+   ========================================== */
+.principal {
+    background-image: url(/img/image.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.7); 
+    background-blend-mode: multiply;
+    height: 50vw;
+}
+
+#guia_sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 0 10px black;
+    background-color: rgba(77, 53, 53, 0.308);
+    position: relative;
+    margin-inline: 50vh;
+    margin-block: 10px;
+    padding: 1rem;
+    height: 20vw;
+    width: 40vw;
+    top: 25%;
+    align-items: center;
+}
+
+/* PARÁGRAFO GLOBAL COM EFEITO NEON */
+p {  
+    margin-bottom: 2vw;
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+    text-shadow: -1px -1px 8px rgb(0, 255, 157);
+}
+
+#BuscaReceita {
+  border: none;
+  width: 15rem;
+  height: 3rem;
+  padding: 0.3rem 2.5rem 0.3rem 0.75rem; 
+  border-radius: 10px;
+  box-shadow: 0 0 7px black;
+}   
+
+.align_buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;
+}
+
+#Como_usar {
+    border: none;
+    height: 2.2rem;
+    padding: 1.5rem;
+    width: 6rem;
+    font-size: medium;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 29px black;
+    display: inline-flex;
+    background-color: #1e8ff85b;
+    border-radius: 8px;
+    list-style: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#Como_usar:hover {
+    transform: scale(1.1);
+    background-color: #1a77ce5b;
+}
+
+#buscabtn {
+    border: none;
+    background-color: var(--cor-botoes);
+    color: #ffffff;
+    height: 2.5rem;
+    padding: 1.5rem;
+    width: 6rem;
+    font-size: medium;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+#buscabtn:hover {
+    transform: scale(1.1);
+    background-color:#c49031;
+}
+
+/* ==========================================
+   4. INSCRIÇÃO E CARDS
+   ========================================== */
+#guia_inscricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #131313;
+    height: 100vh;
+    width: 100%;
+    margin-block: 50px;
+}
+
+.incricao {
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    font-family: fantasy;
+}
+
+span {
+    color: #c49031;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 150px;
+}
+
+.hero h2 {
+    color: white;
+}
+
+.card1 img, .card2 img, .card3 img {
+    width: 20vw;
+    margin-top: 10px;
+    height: 15vw;
+    object-fit: cover;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 20px rgb(175, 0, 0);
+}
+
+.card1 img:hover, .card2 img:hover, .card3 img:hover {
+    transform: scale(1.1);
+}
+
+.descricao_projeto {
+    font-size: large;
+    text-shadow: none; /* Tira o neon daqui */
+    align-items: center;
+    margin: 20px;
+}
+
+.sabermais {
+    font-size: 25px;
+    color: rgb(123, 255, 0);
+}
+
+#culinaria {
+    color: white;
+    background-color: var(--cor-importante);
+    border: none;
+    border-radius: 8px;
+    padding: 1.1rem;
+    font-size: medium;
+    margin: 20px;
+    cursor: alias;
+}
+
+#culinaria a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    cursor: alias;
+
+}
+
+#culinaria:hover {
+    transform: scale(1.1);
+    background-color: #d14c04;
+}
+
+/* ==========================================
+   5. RODAPÉ (FOOTER)
+   ========================================== */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.org {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.org div {
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+}
+
+.org a {
+    list-style: none;
+    color: wheat;
+    text-decoration: none;
+}
+
+.insta img, .WhatsApp img, .Tiktok img {
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+}
+
+.insta:hover, .WhatsApp:hover, .Tiktok:hover {
+    transform: scale(1.1);
+}
+
+.infos {
+    display: flex;
+    margin: 40px;
+    flex-direction: column;
+    color: var(--cor-textos);
+}
+
+.direitos {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: white;
+}
+
+.direitos:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   6. MENU LATERAL DESLIZANTE
+   ========================================== */
+#menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0; 
+    width: 300px; 
+    height: 100vh; 
+    background-color: rgba(30, 30, 30, 0.85); 
+    backdrop-filter: blur(10px); 
+    border-left: 1px solid rgba(255, 255, 255, 0.1); 
+    padding-top: 30px;
+    z-index: 999; 
+    right: -300px; /* Começa escondido */
+    transition: right 0.4s ease-in-out; 
+}
+
+#menu.ativo {
+    right: 0; /* Aparece! */
+}
+
+.menu_Tittle {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px; 
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 0; 
+}
+
+#menu li {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 80%; 
+    height: 50px; 
+    background-color: #2a2a2a;
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+    list-style: none;
+    transition: all 0.3s ease; 
+}
+
+#menu li:hover {
+    transform: scale(1.05); 
+    background-color: #ff8c00; 
+    box-shadow: 0 6px 15px rgba(255, 140, 0, 0.4); 
+}
+
+#menu a {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* ==========================================
+   7. CAIXA DE RESULTADO DA RECEITA 
+   (Agora não vaza e tem barra de rolagem!)
+   ========================================== */
+.result_busca {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    
+    /* Centralizado fixo pra nunca quebrar o layout */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(0); 
+    
+    width: 60vw;
+    height: auto; 
+    max-height: 85vh; /* Se passar disso, cria a rolagem */
+    align-items: center;
+    border-radius: 20px;
+    z-index: 500; /* Fica acima de tudo, menos do menu e modal */
+    transition: transform 0.4s ease;
+}
+
+.result_busca.ativo {
+    transform: translate(-50%, -50%) scaleX(1);
+}
+
+.nome_receita {
+    color: var(--cor-header);
+    font-size: 28px;
+    text-transform: uppercase;
+    text-shadow: none; /* Mata o neon aqui também se tiver */
+}
+
+.imagem_receita {
+    width: 250px; 
+    height: 250px; 
+    display: block !important; 
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 0 7px black;
+}
+
+.descricao_receita {
+    font-family: 'Arial', sans-serif; 
+    font-size: 18px; 
+    line-height: 1.6; 
+    color: #444 !important; 
+    text-align: justify; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 10px; 
+    width: 100%; 
+    overflow-y: auto; /* A MÁGICA DO SCROLL TÁ AQUI */
+    text-shadow: none !important; /* MATA O NEON DO TEXTO DA RECEITA */
+}
+
+/* SCROLLBAR CUSTOMIZADA DA RECEITA */
+.descricao_receita::-webkit-scrollbar {
+    width: 10px;
+}
+.descricao_receita::-webkit-scrollbar-track {
+    background: #e0e0e0; 
+    border-radius: 10px;
+}
+.descricao_receita::-webkit-scrollbar-thumb {
+    background: var(--cor-botoes); 
+    border-radius: 10px;
+}
+.descricao_receita::-webkit-scrollbar-thumb:hover {
+    background: var(--cor-header); 
+}
+
+/* ==========================================
+   8. O MODAL DE "COMO USAR"
+   (Blindado, Centralizado e sem Neon)
+   ========================================== */
+.modal-fundo {
+    position: fixed !important; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: rgba(0, 0, 0, 0.85); 
+    backdrop-filter: blur(10px); 
+    z-index: 99999; 
+    opacity: 0; 
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.modal-fundo.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-caixa {
+    background-color: var(--cor-principal);
+    padding: 50px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 550px;
+    text-align: center;
+    border-top: 10px solid var(--cor-header);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    transform: scale(0.6);
+    transition: all 0.4s ease-in-out;
+}
+
+.modal-fundo.ativo .modal-caixa {
+    transform: scale(1);
+}
+
+.modal-caixa h2, 
+.modal-caixa p, 
+.modal-caixa ul, 
+.modal-caixa li {
+    text-shadow: none !important; 
+    filter: none !important; 
+    color: var(--cor-textos) !important; 
+    font-size: 18px !important; 
+}
+
+.modal-caixa h2 {
+    color: var(--cor-header) !important;
+    font-size: 32px !important;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.btn-fechar {
+    background-color: var(--cor-header);
+    color: white !important;
+    border: none;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s;
+    text-shadow: none !important; 
+}
+
+.btn-fechar:hover {
+    background-color: var(--cor-fundoback);
+    transform: scale(1.05);
+}
