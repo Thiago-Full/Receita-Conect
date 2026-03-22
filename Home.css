@@ -248,15 +248,13 @@ span {
     padding: 1.1rem;
     font-size: medium;
     margin: 20px;
-    cursor: alias;
+    cursor: pointer;
 }
 
 #culinaria a {
     list-style: none;
     text-decoration: none;
     color: white;
-    cursor: alias;
-
 }
 
 #culinaria:hover {
@@ -395,7 +393,6 @@ nav {
 
 /* ==========================================
    7. CAIXA DE RESULTADO DA RECEITA 
-   (Agora não vaza e tem barra de rolagem!)
    ========================================== */
 .result_busca {
     display: flex;
@@ -405,7 +402,6 @@ nav {
     background-color: rgb(255, 255, 255);
     padding: 2rem;
     
-    /* Centralizado fixo pra nunca quebrar o layout */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -413,10 +409,10 @@ nav {
     
     width: 60vw;
     height: auto; 
-    max-height: 85vh; /* Se passar disso, cria a rolagem */
+    max-height: 85vh;
     align-items: center;
     border-radius: 20px;
-    z-index: 500; /* Fica acima de tudo, menos do menu e modal */
+    z-index: 500;
     transition: transform 0.4s ease;
 }
 
@@ -428,7 +424,7 @@ nav {
     color: var(--cor-header);
     font-size: 28px;
     text-transform: uppercase;
-    text-shadow: none; /* Mata o neon aqui também se tiver */
+    text-shadow: none; 
 }
 
 .imagem_receita {
@@ -450,11 +446,10 @@ nav {
     background-color: #f9f9f9; 
     border-radius: 10px; 
     width: 100%; 
-    overflow-y: auto; /* A MÁGICA DO SCROLL TÁ AQUI */
-    text-shadow: none !important; /* MATA O NEON DO TEXTO DA RECEITA */
+    overflow-y: auto; 
+    text-shadow: none !important; 
 }
 
-/* SCROLLBAR CUSTOMIZADA DA RECEITA */
 .descricao_receita::-webkit-scrollbar {
     width: 10px;
 }
@@ -472,7 +467,6 @@ nav {
 
 /* ==========================================
    8. O MODAL DE "COMO USAR"
-   (Blindado, Centralizado e sem Neon)
    ========================================== */
 .modal-fundo {
     position: fixed !important; 
@@ -548,13 +542,13 @@ nav {
     background-color: var(--cor-fundoback);
     transform: scale(1.05);
 }
+
 /* ==========================================
-   9. RESPONSIVIDADE BRABA (MATA QUALQUER BUG DE TELA)
+   9. RESPONSIVIDADE BRABA
    ========================================== */
 
 /* 📱 MODO TABLET E TELAS MÉDIAS (Até 1024px) */
 @media (max-width: 1024px) {
-    /* Desempilha as fotos e ajusta o tamanho */
     .hero {
         flex-direction: column !important;
         gap: 40px !important;
@@ -563,8 +557,6 @@ nav {
         width: 70vw !important;
         height: auto !important;
     }
-    
-    /* Centraliza a caixa principal e mata a margem gigante */
     #guia_sobre {
         margin-inline: auto !important; 
         width: 80vw !important;
@@ -579,7 +571,6 @@ nav {
 
 /* 📱 MODO CELULAR RAIZ (Até 768px) */
 @media (max-width: 768px) {
-    /* Cabeçalho não explode */
     header h1 {
         font-size: 20px !important;
     }
@@ -587,15 +578,11 @@ nav {
         width: 60px !important;
         height: 50px !important;
     }
-    
-    /* Caixa de busca ocupa a tela toda e não foge pro lado */
     #guia_sobre {
         width: 95vw !important;
         margin-top: 30px !important;
         top: 0 !important;
     }
-    
-    /* Botões de busca um embaixo do outro no celular */
     .align_buttons {
         flex-direction: column !important;
         gap: 15px !important;
@@ -604,13 +591,9 @@ nav {
     #buscabtn, #Como_usar {
         width: 100% !important;
     }
-
-    /* Fotos gigantes no celular */
     .card1 img, .card2 img, .card3 img {
         width: 90vw !important;
     }
-    
-    /* Receita centralizada e sem vazar */
     .result_busca {
         width: 95vw !important;
         padding: 1.5rem !important;
@@ -627,14 +610,10 @@ nav {
         font-size: 16px !important;
         padding: 15px !important;
     }
-
-    /* Modal na medida certa */
     .modal-caixa {
         width: 95% !important;
         padding: 30px 20px !important;
     }
-
-    /* Rodapé organizado */
     footer {
         flex-direction: column !important;
         gap: 20px !important;
@@ -644,11 +623,7 @@ nav {
     .org {
         justify-content: center !important;
     }
-    
-    /* Menu lateral um pouco mais fino */
     #menu {
         width: 250px !important;
-    }
-}        margin: 10px;
     }
 }
